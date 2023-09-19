@@ -160,7 +160,7 @@ const eliminar = (id) =>{
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // El usuario hizo clic en "OK"
-                        window.location.href = 'Pedidos.html'; // Redireccionar después del clic en OK
+                        window.location.href = 'pedidos.html'; // Redireccionar después del clic en OK
                     }
                 });
             })
