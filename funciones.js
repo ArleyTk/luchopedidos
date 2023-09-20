@@ -43,7 +43,6 @@ const listarDatos = async(busqueda) => {
             `<td>${usuario.productospedido}</td>`+
             `<td>${usuario.clientepedido}</td>`+
             `<td><i onclick="window.location.href='ActualizarPed.html?_id=${usuario._id}'" class="fa-solid fa-pen-to-square iconosRojos"></i>
-            <i class="fas fa-toggle-on toggle-icon "></i>
             <i class="fa-solid fa-trash iconosRojos"  onclick='eliminar("${usuario._id}")'></i>
             </td>`+
 
