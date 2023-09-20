@@ -21,7 +21,7 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
-<body>
+<body onload="cargarDatos()">
   <div class="barraPrincipal">
     <div class="contenedor_1">
 
@@ -105,7 +105,7 @@
         <div class="contForms">
           <div class="input1">
             <p class="parrafoGris"><i class="fa-solid fa-key iconosRojos"></i> ID de la base de datos</p>
-            <input id="_id" class="input-field gris" type="text" placeholder="">
+            <input id="_id" class="input-field gris" type="text" placeholder="" style="max-width: 500px; background-color: rgba(201, 202, 202, 0.418);" readonly>
           </div>
           <br>
           <div class="input1">
@@ -145,6 +145,22 @@
   </div>
 
 
+
+  <script>
+    // Función para obtener el ID del cliente de la URL
+    function obtenerIDPedidoDesdeURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('_id');
+    }
+  
+    // Obtener el ID del cliente de la URL
+    const idPedido = obtenerIDPedidoDesdeURL();
+  
+    function cargarDatos() {
+      consultarPedido(idPedido);
+    }
+  </script>
+  
 
   <script src="funciones.js"></script>
   <script src="js/Menu.js"></script>
